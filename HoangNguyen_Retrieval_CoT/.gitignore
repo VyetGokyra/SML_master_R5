@@ -1,0 +1,13 @@
+# Environment configs
+.env
+
+# Virtual environments
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Jupyter
+.ipynb_checkpoints/
