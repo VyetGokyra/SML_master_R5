@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+pytest
+httpx
+langchain-core
+langchain-community
+langchain-huggingface
+chromadb
+sentence-transformers
+wikipedia

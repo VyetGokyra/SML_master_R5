@@ -1,5 +1,6 @@
 # Internal documentation
 internal_docs/
+derived_docs/
 
 # Python
 __pycache__/
