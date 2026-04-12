@@ -45,7 +45,6 @@ env/
 .jupyter/
 
 # Data files
-*.csv
 *.json
 *.parquet
 *.xlsx
