@@ -44,14 +44,13 @@ env/
 .ipynb_checkpoints/
 .jupyter/
 
-# Data files
-*.json
+# Data filesß
 *.parquet
 *.xlsx
 *.xls
 
 # Model files
-*.pkl
+*.pklß
 *.pickle
 *.h5
 *.joblib
