@@ -63,3 +63,4 @@ Thumbs.db
 
 # Dependencies
 requirements-dev.txt
+*.csv
