@@ -11,7 +11,7 @@ from langchain.chains import RetrievalQA
 from langchain_core.prompts import PromptTemplate
 
 # 1. Setup Environment - USE YOUR ACTUAL API KEY
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCIwVUI76_rROcQrATEexPURVF43welPUk"
+os.environ["GOOGLE_API_KEY"] = "GOOGLE_API_KEY"
 
 # Step 1: Data Ingestion (Matches your folder structure)
 try:
