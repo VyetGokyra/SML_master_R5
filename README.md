@@ -57,6 +57,7 @@ SML_master_R5/
 ├── [... Tương tự cho tập RTE ...]
 │
 ├── docs/                               <-- Thư mục chứa Báo cáo Khoa Học
+│   ├── R5_Architecture_Flowchart.md    <-- Sơ đồ Benchmark Diagram (Mermaid)
 │   ├── R5_COPA_Benchmark_Report.md
 │   ├── R5_FinQA_Benchmark_Report.md
 │   ├── R5_IMDB_Benchmark_Report.md
