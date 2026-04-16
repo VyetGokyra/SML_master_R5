@@ -1,6 +1,6 @@
 # Prompt-Bench: A Multi-Architecture Benchmark for Prompt-based Learning
 
-**Prompt-Bench** đánh giá hệ thống **7 kỹ thuật Prompt Engineering** (Cloze, PET, RAG, CoT, Decompose…) trên **4 kiến trúc mô hình** (BERT, FlanT5, Qwen3-0.6B, Qwen3.5-0.8B) với **4 tập dữ liệu** NLP đa dạng (COPA, RTE, IMDB, FinQA). Mục tiêu: so sánh hiệu quả từng dạng prompt theo kiến trúc mô hình trong bài toán học dựa trên prompt — môn học Statistical Machine Learning (R5).
+**Prompt-Bench** đánh giá hệ thống **6 kỹ thuật Prompt Engineering** (Cloze, PET, RAG, CoT, Decompose…) trên **4 kiến trúc mô hình** (BERT, FlanT5, Qwen3-0.6B, Qwen3.5-0.8B) với **4 tập dữ liệu** NLP đa dạng (COPA, RTE, IMDB, FinQA). Mục tiêu: so sánh hiệu quả từng dạng prompt theo kiến trúc mô hình trong bài toán học dựa trên prompt — môn học Statistical Machine Learning (R5).
 
 ---
 
