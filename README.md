@@ -6,20 +6,20 @@
 
 ## 🏗️ 1. Cấu trúc Thực nghiệm (Experimental Setup)
 
-Hệ thống được thiết kế để đong đếm giới hạn trí tuệ của AI qua việc đa dạng hóa từ Dataset đến Modeling.
+
 
 ### 📚 Tập dữ liệu đọ sức (Datasets)
 1. **[RTE] Entailment (Logic Semantic):** Tư duy NLI, nhận dạng hàm ý kéo theo (Premise -> Hypothesis).
 2. **[COPA] Commonsense Reasoning:** Kiến thức thường thức xã hội, nguyên nhân & hệ quả thực tế đời sống.
 
 ### 🧠 Các Mô hình Ngôn ngữ Khảo sát (Architectures)
-* **`bert-base-uncased` (Masked LM):** Sức mạnh điền khuyết với cơ chế 2 chiều thuần túy.
-* **`google/flan-t5-base` (Seq2Seq):** Kiến trúc Encoder-Decoder được Instruction-Tuned tối đa.
-* **`Qwen/Qwen3-0.6B` (Causal LM):** Sức mạnh dự đoán Next-Token với lượng pre-training khổng lồ.
-* **`Qwen/Qwen3.5-0.8B` (Causal LM):** Kiến trúc tiên tiến gánh trọn vẹn khả năng tư duy phi tuyến tính ở hệ tham số dưới 1 tỷ.
+* **`bert-base-uncased` (Masked LM):**
+* **`google/flan-t5-base` (Seq2Seq):** 
+* **`Qwen/Qwen3-0.6B` (Causal LM):** 
+* **`Qwen/Qwen3.5-0.8B` (Causal LM):**
 
 ### 🎭 Từ điển Kỹ thuật Prompt (Methodologies)
-Dự án cắm sâu vào phân tích 6 loại hình Prompts mang xu hướng đỉnh cao giới ML/NLP:
+Dự án phân tích 6 loại hình Prompts mang xu hướng ML/NLP:
 1. `Cloze Simple`
 2. `Cloze + RAG` (In-Context Few-shot)
 3. `Prefix Zero-shot`
