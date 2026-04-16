@@ -1,0 +1,90 @@
+{
+  "COPA": [
+    {
+      "example_id": 1,
+      "raw_input": {
+        "premise": "The man turned on the faucet.",
+        "choice1": "The toilet filled with water.",
+        "choice2": "Water flowed from the spout.",
+        "question": "effect"
+      },
+      "label": "2",
+      "prompts": {
+        "cloze_simple": "Premise: The man turned on the faucet.\nChoice 1: The toilet filled with water.\nChoice 2: Water flowed from the spout.\nThe correct choice is Choice ___",
+        "pet_style": "1: The toilet filled with water.. 2: Water flowed from the spout.. The man turned on the faucet. therefore choice ___.",
+        "cloze_rag": "P: The woman repaired her faucet.\nC1: The faucet was leaky.\nC2: The faucet was turned off.\nAns: Choice 1.\n\nP: The man turned on the faucet.\nC1: The toilet filled with water.\nC2: Water flowed from the spout.\nAns: Choice ___",
+        "prefix_zeroshot": "Determine the effect of the premise.\nPremise: The man turned on the faucet.\n1) The toilet filled with water.\n2) Water flowed from the spout.\nAnswer (1 or 2): ___",
+        "prefix_rag": "Premise: The woman repaired her faucet.\n1) The faucet was leaky.\n2) The faucet was turned off.\nQ: cause\nCorrect: 1\n\nPremise: The man took a shower.\n1) He was sweaty from working out.\n2) He opened a new bar of soap.\nQ: cause\nCorrect: 1\n\nPremise: The man turned on the faucet.\n1) The toilet filled with water.\n2) Water flowed from the spout.\nQ: effect\nCorrect: ___",
+        "prefix_cot": "Premise: The man turned on the faucet.\n1) The toilet filled with water.\n2) Water flowed from the spout.\nLet's think step by step to find the effect. ___",
+        "decompose_rag": {
+          "step1": "Premise: The man turned on the faucet.\nQuestion: What is the main subject? ___",
+          "step2": "Subject: [answer from step 1]\nPremise: The man turned on the faucet.\nQuestion: What is its effect?\n1) The toilet filled with water.\n2) Water flowed from the spout.\nChoice: ___"
+        }
+      }
+    },
+    {
+      "example_id": 2,
+      "raw_input": {
+        "premise": "The girl found a bug in her cereal.",
+        "choice1": "She poured milk in the bowl.",
+        "choice2": "She lost her appetite.",
+        "question": "effect"
+      },
+      "label": "2",
+      "prompts": {
+        "cloze_simple": "Premise: The girl found a bug in her cereal.\nChoice 1: She poured milk in the bowl.\nChoice 2: She lost her appetite.\nThe correct choice is Choice ___",
+        "pet_style": "1: She poured milk in the bowl.. 2: She lost her appetite.. The girl found a bug in her cereal. therefore choice ___.",
+        "cloze_rag": "P: The girl found the missing puzzle piece.\nC1: She completed the puzzle.\nC2: She took apart the puzzle.\nAns: Choice 1.\n\nP: The girl found a bug in her cereal.\nC1: She poured milk in the bowl.\nC2: She lost her appetite.\nAns: Choice ___",
+        "prefix_zeroshot": "Determine the effect of the premise.\nPremise: The girl found a bug in her cereal.\n1) She poured milk in the bowl.\n2) She lost her appetite.\nAnswer (1 or 2): ___",
+        "prefix_rag": "Premise: The girl found the missing puzzle piece.\n1) She completed the puzzle.\n2) She took apart the puzzle.\nQ: effect\nCorrect: 1\n\nPremise: The girl's mouth ached.\n1) She lost a tooth.\n2) She swallowed her gum.\nQ: cause\nCorrect: 1\n\nPremise: The girl found a bug in her cereal.\n1) She poured milk in the bowl.\n2) She lost her appetite.\nQ: effect\nCorrect: ___",
+        "prefix_cot": "Premise: The girl found a bug in her cereal.\n1) She poured milk in the bowl.\n2) She lost her appetite.\nLet's think step by step to find the effect. ___",
+        "decompose_rag": {
+          "step1": "Premise: The girl found a bug in her cereal.\nQuestion: What is the main subject? ___",
+          "step2": "Subject: [answer from step 1]\nPremise: The girl found a bug in her cereal.\nQuestion: What is its effect?\n1) She poured milk in the bowl.\n2) She lost her appetite.\nChoice: ___"
+        }
+      }
+    }
+  ],
+  "RTE": [
+    {
+      "example_id": 1,
+      "raw_input": {
+        "premise": "Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.",
+        "hypothesis": "Christopher Reeve had an accident."
+      },
+      "label": "no",
+      "prompts": {
+        "cloze_simple": "Premise: Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\nHypothesis: Christopher Reeve had an accident.\nDoes the premise entail the hypothesis? ___",
+        "pet_style": "Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation. ? ___ , Christopher Reeve had an accident.",
+        "cloze_rag": "P: Christopher Reeve, an actor and director who became an inspiration worldwide after being paralyzed in a horse riding accident, died Sunday of heart failure.\nH: Christopher Reeve had an accident.\nAns: yes.\nP: Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\nH: Christopher Reeve had an accident.\nAns: ___",
+        "prefix_zeroshot": "Given the premise: \"Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\", does it imply \"Christopher Reeve had an accident.\"? Answer yes or no. Answer: ___",
+        "prefix_rag": "Premise: Christopher Reeve, an actor and director who became an inspiration worldwide after being paralyzed in a horse riding accident, died Sunday of heart failure.\nHypothesis: Christopher Reeve had an accident.\nDoes it entail? yes\nPremise: Actor Christopher Reeve, best known for his role as Superman, is paralyzed and cannot breathe without the help of a respirator after breaking his neck in a riding accident in Culpeper, Va., on Saturday.\nHypothesis: Christopher Reeve had an accident.\nDoes it entail? yes\nPremise: Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\nHypothesis: Christopher Reeve had an accident.\nDoes it entail? ___",
+        "prefix_cot": "Premise: Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\nHypothesis: Christopher Reeve had an accident.\nLet's think step by step to see if they mean the same thing. ___",
+        "decompose_rag": {
+          "step1": "Hypothesis: Christopher Reeve had an accident.\nQuestion: What is the main action? ___",
+          "step2": "Main action: [answer from step 1]\nPremise: Dana Reeve, the widow of the actor Christopher Reeve, has died of lung cancer at age 44, according to the Christopher Reeve Foundation.\nHypothesis: Christopher Reeve had an accident.\nDoes the premise entail the hypothesis? ___"
+        }
+      }
+    },
+    {
+      "example_id": 2,
+      "raw_input": {
+        "premise": "Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.",
+        "hypothesis": "Bacteria is winning the war against antibiotics."
+      },
+      "label": "yes",
+      "prompts": {
+        "cloze_simple": "Premise: Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.\nHypothesis: Bacteria is winning the war against antibiotics.\nDoes the premise entail the hypothesis? ___",
+        "pet_style": "Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations. ? ___ , Bacteria is winning the war against antibiotics.",
+        "cloze_rag": "P: Fast forward a decade or two and scientists began to notice antibiotic-resistant strains of bacteria.\nH: Bacteria is winning the war against antibiotics.\nAns: no.\nP: Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.\nH: Bacteria is winning the war against antibiotics.\nAns: ___",
+        "prefix_zeroshot": "Given the premise: \"Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.\", does it imply \"Bacteria is winning the war against antibiotics.\"? Answer yes or no. Answer: ___",
+        "prefix_rag": "Premise: Fast forward a decade or two and scientists began to notice antibiotic-resistant strains of bacteria.\nHypothesis: Bacteria is winning the war against antibiotics.\nDoes it entail? no\nPremise: When patients interrupt a course of antibiotics, the surviving bacteria return with a vengeance, often having rapidly mutated to resist the therapy.\nHypothesis: Bacteria is winning the war against antibiotics.\nDoes it entail? no\nPremise: Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.\nHypothesis: Bacteria is winning the war against antibiotics.\nDoes it entail? ___",
+        "prefix_cot": "Premise: Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.\nHypothesis: Bacteria is winning the war against antibiotics.\nLet's think step by step to see if they mean the same thing. ___",
+        "decompose_rag": {
+          "step1": "Hypothesis: Bacteria is winning the war against antibiotics.\nQuestion: What is the main action? ___",
+          "step2": "Main action: [answer from step 1]\nPremise: Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.\nHypothesis: Bacteria is winning the war against antibiotics.\nDoes the premise entail the hypothesis? ___"
+        }
+      }
+    }
+  ]
+}
