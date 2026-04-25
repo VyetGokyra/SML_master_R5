@@ -70,7 +70,3 @@ python run_all_models_finqa.py
 # Chạy đánh giá Sentiment Analysis (IMDB)
 python run_qwen_imdb.py
 ```
-
-### ⚠️ Lưu ý về PET-style (Pattern-Exploiting Training)
-> [!NOTE]
-> Kỹ thuật **PET-style** hiện tại đang trong quá trình được làm lại (Refactoring) để tối ưu và ổn định hơn. Tuy nhiên, nó **đã được tích hợp đầy đủ** vào trong các bộ chạy chính (universal runners). Do đó, khi bạn chạy các lệnh benchmark tổng hợp ở trên, kết quả của PET-style sẽ tự động được kiểm nghiệm và xuất ra cùng với các luận điểm (prompts) khác!
