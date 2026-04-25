@@ -43,14 +43,6 @@ SML_master_R5/
 ├── RTE_bert_benchmark/
 ├── [... Tương tự cho tập RTE ...]
 │
-├── docs/                               <-- Thư mục chứa Báo cáo Khoa Học
-│   ├── R5_Architecture_Flowchart.md    <-- Sơ đồ Benchmark Diagram (Mermaid)
-│   ├── R5_IMDB_Benchmark_Report.md
-│   ├── R5_RTE_Benchmark_Report.md
-│   ├── R5_Execution_Guide.md           <-- HDSD Môi trường dòng lệnh
-│   ├── R5_Dataset_Configurations.md
-│   └── R5_Prompt_Methodology_Catalog.md
-│
 ├── run_rte_all.py                      <-- Lõi Engine (Universal Runner)
 ├── run_copa_all.py
 ├── run_all_models_finqa.py
